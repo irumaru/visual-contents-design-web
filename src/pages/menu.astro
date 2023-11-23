@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+import im_namaniku from "../images/2023素材例/640x640_rect_d72a707c331535c4da2af4f1cd6001d3.jpg";
+import im_sakana from "../images/2023素材例/s_0n9b.jpg";
+import im_ahijo from "../images/2023素材例/アヒージョ.jpg";
+import im_garikuwine from "../images/2023素材例/ガーリックトーストとワイン.jpg";
+import im_craftbeel from "../images/2023素材例/クラフトビール.jpg";
+import im_pasta from "../images/2023素材例/こだわり１絶品パスタ.jpg";
+import im_desert from "../images/2023素材例/こだわり２.jpg";
+import im_sarada from "../images/2023素材例/こだわり１.jpg";
+import im_thizu from "../images/2023素材例/こだわり５チーズ料理.jpg";
+import im_tomato from "../images/2023素材例/トマトとモッツァレラチーズ.jpg";
+import im_stake1 from "../images/2023素材例/国産業ステーキ２.jpg";
+import im_ninki from "../images/2023素材例/ワインと人気メニュー.jpg";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>レストランCIT</title>
+	</head>
+	<body>
+		<Header />
+		<div class="max-w-4xl mx-auto flex flex-wrap justify-center">
+			<Card title="生肉" description="おいしい生肉" image={im_namaniku} />
+			<Card title="魚" description="おいしい魚" image={im_sakana} />
+			<Card title="アヒージョ" description="おいしいアヒージョ" image={im_ahijo} />
+			<Card title="ガーリックワイン" description="おいしいガーリックワイン" image={im_garikuwine} />
+			<Card title="クラフトビール" description="おいしいクラフトビール" image={im_craftbeel} />
+			<Card title="パスタ" description="おいしいパスタ" image={im_pasta} />
+			<Card title="デザート" description="おいしいデザート" image={im_desert} />
+			<Card title="サラダ" description="おいしいサラダ" image={im_sarada} />
+			<Card title="チーズ" description="おいしいチーズ" image={im_thizu} />
+			<Card title="トマト" description="おいしいトマト" image={im_tomato} />
+			<Card title="ステーキ" description="おいしいステーキ" image={im_stake1} />
+			<Card title="人気" description="おいしい人気" image={im_ninki} />
+		</div>
+		<Footer />
+	</body>
+</html>
