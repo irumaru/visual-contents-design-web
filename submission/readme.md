@@ -27,6 +27,8 @@
 
 ### Tailwind CSS & DaisyUI(手軽にオリジナリティの高いサイトを作成)
 
+### React(react-responsive-carouselを使用することで手軽にがルーセルを実装)
+
 ### Cloudflare CDN(よりユーザに近いEdgeからデータを配信)
 
-### React(react-responsive-carouselを使用することで手軽にがルーセルを実装)
+### Github Pages & Github Actions(簡単にデプロイ)
