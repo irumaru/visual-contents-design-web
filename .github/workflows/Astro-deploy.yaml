@@ -15,8 +15,8 @@ permissions:
   id-token: write
 
 env:
-  BASE: /visual-contents-design-web
-  SITE: https://irumaru.github.io/
+  BASE: /
+  SITE: https://vcdw.irumaru.net
 
 jobs:
   build:
