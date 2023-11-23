@@ -1,6 +1,16 @@
 ---
+import { Image } from "astro:assets";
+
+import im_c1 from "../images/2023素材例/640x640_rect_d72a707c331535c4da2af4f1cd6001d3.jpg";
+import im_c2 from "../images/2023素材例/こだわり５ (2).jpg";
+import im_c3 from "../images/2023素材例/ワインと人気メニュー.jpg";
+import im_c4 from "../images/2023素材例/外観.jpg";
+import im_c5 from "../images/2023素材例/内装２.jpg";
+
 import Header from "../components/Header.astro";
-import Carousel from "../components/Carousel.astro";
+import Footer from "../components/Footer.astro";
+import {HomeCarousel} from "../components/Carousel.tsx";
+import Commitment from "../components/Commitment.astro";
 ---
 
 <html lang="ja">
@@ -13,7 +23,79 @@ import Carousel from "../components/Carousel.astro";
 	</head>
 	<body>
 		<Header />
-		<Carousel />
-		<div></div>
+		<div class="max-w-4xl mx-auto">
+			<div class="my-2">
+				<HomeCarousel client:visible >
+					<Image src={im_c1} alt="1" slot="im_1" />
+					<Image src={im_c2} alt="2" slot="im_2" />
+					<Image src={im_c3} alt="3" slot="im_3" />
+					<Image src={im_c4} alt="4" slot="im_4" />
+					<Image src={im_c5} alt="5" slot="im_5" />
+				</HomeCarousel>
+			</div>
+			<div class="my-10">
+				<p class="text-4xl leading-loose text-center">
+					旬の食材を使ったコスパ最高美味しい料理<br>
+					自分達が美味しいと思ったワインだけをご用意<br>
+					女子会、記念日、友人とお気軽にどうぞ！！
+				</p>
+			</div>
+			<div class="w-full my-8 flex justify-center">
+				<table class="table-auto w-full text-center text-xl max-w-xl" border="1">
+					<tr>
+						<th>コース</th>
+						<th>料金</th>
+						<th>時間</th>
+					</tr>
+					<tr>
+						<td>カジュアルコース</td>
+						<td>2,980円</td>
+						<td>朝・昼・夜</td>
+						
+					</tr>
+					<tr>
+						<td>スタンダードコース</td>
+						<td>3,980円</td>
+						<td>昼・夜</td>
+					</tr>
+					<tr>
+						<td>プレミアムコース</td>
+						<td>5,980円</td>
+						<td>夜</td>
+					</tr>
+				</table>
+			</div>
+			<div class="w-full overflow-hidden flex justify-center my-8">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405.06487407700405!2d140.02004433208467!3d35.68884412549581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022802709cab4ed%3A0x206c9c7745731061!2z44CSMjc1LTAwMTYg5Y2D6JGJ55yM57-S5b-X6YeO5biC5rSl55Sw5rK877yS5LiB55uu77yR77yXIDblj7fppKgo6Kyb576p5qOfKQ!5e0!3m2!1sja!2sjp!4v1700709581763!5m2!1sja!2sjp" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="w-full flex flex-wrap">
+				<Commitment title="こだわり１">
+					日替わりメニュー<br>
+					豊富な日替わりメニュー！！<br>
+					<br>
+					旬の美味しいお野菜、魚、お肉で美味しい料理を提供しております。<br>
+					毎日変わるおすすめメニューも大人気です。ワインと一緒にお楽しみ下さい。
+				</Commitment>
+				<Commitment title="こだわり２">
+					気軽に立ち寄れる<br>
+					気軽に立ち寄れるワイン酒場<br>
+					<br>
+					ワインに合わせたリーズナブルで美味しいアラカルトメニューも豊富です！！オーナーが美味しいと思うワインを取り揃えてます。お気軽にふらっとお立ち寄り下さいね
+				</Commitment>
+				<Commitment title="こだわり３">
+					パーティーコース<br>
+					美味しいパーティーコース<br>
+					<br>
+					お得なコースメニューは2980円から3種類ございます。飲み放題付きコースも人気です。女子会、お仲間とのご宴会におすすめです。
+				</Commitment>
+				<Commitment title="こだわり４">
+					グラスワイン<br>
+					リーズナブルな日替わりグラスワイン<br>
+					<br>
+					コスパ最高の美味しいワインを取り揃えております。日替わりグラスワインは580円〜美味しいワインを気軽にお楽しみください。ボトルワインも各種ご用意しております。
+				</Commitment>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
